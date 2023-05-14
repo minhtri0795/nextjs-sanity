@@ -4,14 +4,24 @@ export default {
     title: 'Testimonials',
     fields:[
         {
-            name: 'title',
-            type: 'string',
-            title: 'Title'
+            name: 'summary',
+            type: 'text',
+            title: 'Summary'
         },
         {
-            name: 'description',
+            name: 'name',
             type: 'string',
-            title: 'Testimonials description'
+            title: 'Name'
         },
+        {
+            name: 'position',
+            type: 'string',
+            title: 'Position'
+        },
+        {
+            name:'avatar',
+            type:'image',
+            title:'Avatar',
+        }
     ]
 }
