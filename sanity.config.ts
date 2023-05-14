@@ -14,6 +14,14 @@ export default defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
+  graphql: [
+    {
+      playground: true,
+      tag:'develop',
+      workspace: 'production',
+      id: 'production',
+    },
+  ],
   //edit schemas in './sanity/schema'
   schema,
   plugins: [
