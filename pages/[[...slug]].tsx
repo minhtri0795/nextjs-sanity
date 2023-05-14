@@ -3,7 +3,11 @@ import Hero from 'components/Hero'
 import Feature from 'components/Feature'
 import Testimonial from 'components/Testimonial'
 import { getAllPageSlugs, getPageBySlugs } from '../lib/api'
+import NotFound from "./404";
 export default function IndexPage({ page }) {
+  if (page === null) {
+    return <NotFound />;
+  }
   return (
     <>
       {/* Start something new 💖 */}
@@ -30,7 +34,6 @@ export async function getStaticPaths() {
         return {params: {slug:[slug]}}
       }
     })
-    console.log("paths===>",finalPaths[1])
   return {
     paths: finalPaths,
     fallback: true,
