@@ -42,9 +42,7 @@ export default memo(function IntroTemplate() {
             alt="An illustration of a browser window, a terminal window, the Sanity.io logo and the NextJS logo"
             src={cover}
           />
-          <div className="mt-10 hidden px-14 text-xs text-gray-700 dark:text-gray-300 md:block">
-            <RemoveBlock url={removeBlockURL} />
-          </div>
+          
         </div>
 
         <div className="mx-6 md:mx-0 md:mr-24">
@@ -179,9 +177,6 @@ export default memo(function IntroTemplate() {
               }
             />
           </ol>
-          <div className="text-center text-xs text-gray-700 dark:text-gray-300 md:invisible">
-            <RemoveBlock url={removeBlockURL} />
-          </div>
         </div>
       </div>
     </div>
@@ -219,17 +214,6 @@ function BlueLink({ href, text }: { href: string; text: string }) {
     </a>
   )
 }
-
-const RemoveBlock = ({ url }) => (
-  <a
-    className="hover:text-blue-800 dark:hover:text-blue-200"
-    href={url}
-    target="_blank"
-    rel="noreferrer"
-  >
-    How to remove this block?
-  </a>
-)
 
 function getGitProvider() {
   switch (process.env.NEXT_PUBLIC_VERCEL_GIT_PROVIDER) {
