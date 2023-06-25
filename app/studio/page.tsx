@@ -1,4 +1,7 @@
+
+'use client'
 import Head from 'next/head'
+import { Metadata } from 'next'
 import { NextStudio } from 'next-sanity/studio'
 import { NextStudioHead } from 'next-sanity/studio/head'
 import { StudioLayout, StudioProvider } from 'sanity'
@@ -9,13 +12,12 @@ const GlobalStyle = createGlobalStyle(({ theme }) => ({
   html: { backgroundColor: theme.sanity.color.base.bg },
 }))
 
+export const metadata: Metadata = {
+    title: 'Sanity studio',
+  }  
 export default function StudioPage() {
   return (
     <>
-      <Head>
-        <NextStudioHead favicons={false} />
-      </Head>
-
       <NextStudio config={config}>
         <StudioProvider config={config}>
           <GlobalStyle />
