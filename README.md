@@ -10,10 +10,8 @@ You can use this starter to kick-start a clean slate site or learn these technol
 
 > **Note**
 >
-> This starter uses the `/pages` directory for Next.js routing.
->
-> The template will be migrated to the currently experimental [/app][app-dir] directory
-> when Vercel announce that it is production ready.
+> This starter support Next js 13 and uses the new `/app` directory for Next.js routing.
+
 
 ## Table of Contents
 
