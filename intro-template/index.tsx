@@ -1,5 +1,4 @@
 'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
 import { memo, useEffect, useState } from 'react'
@@ -7,7 +6,7 @@ import { memo, useEffect, useState } from 'react'
 import cover from './cover.png'
 
 export default memo(function IntroTemplate() {
-  const [studioURL, setStudioURL] = useState(null)
+  const [studioURL, setStudioURL] = useState('')
   const [isLocalHost, setIsLocalhost] = useState(false)
 
   const hasEnvFile = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
@@ -31,7 +30,7 @@ export default memo(function IntroTemplate() {
   }, [])
 
   if (hasUTMtags || !studioURL) {
-    return
+    return null
   }
 
   return (
@@ -83,7 +82,7 @@ export default memo(function IntroTemplate() {
                   {isLocalHost ? (
                     <div className="text-xs text-gray-700 dark:text-gray-300">
                       Start editing your content structure in
-                      <div className="bg-slate-200 w-fit px-2">
+                      <div className="bg-slate-200 w-fit px-2 inline-block">
                         <pre>sanity.config.ts</pre>
                       </div>
                     </div>
